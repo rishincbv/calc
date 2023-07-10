@@ -1,0 +1,179 @@
+* {
+    font-family: 'Rubik', sans-serif; 
+    box-sizing: border-box;
+  }
+  h1{
+    text-align: center;
+    /* margin-top: 50px; */
+
+  }
+  html {
+      height: 100%;
+  }
+  
+  body {
+      margin: 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background: rgb(221, 255, 0);
+      /* ie6-9 */
+  /*     background-color: #607D8B; 
+      background: url("https://dl.dropboxusercontent.com/u/9311890/purpleBlur.jpg") center center no-repeat; */
+      background-size: cover;
+  }
+  
+  .container {
+    margin-top: -5%;
+    margin-bottom: 50%;
+  }
+  
+  #calculator {
+    border: 1px solid #0b56eb;
+    width: 330px;
+    height: 445px;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 20px;
+  /*   background-color: #FF6766;  */
+    background-color: rgb(0, 0, 0); 
+      /* -webkit-box-shadow: 0px 50px 50px -45px rgba(0,0,0,0.85);
+  -moz-box-shadow: 0px 50px 50px -45px rgba(0,0,0,0.85);
+  box-shadow: 0px 50px 50px -45px rgba(0,0,0,0.85); */
+  }
+  #output{
+    width: 250px;
+    height: 50px;
+  }
+  
+  .top span.clear {
+      float: left;
+    width: 45px;
+    height: 45px;
+  /*   border: 1px solid #ddd; */
+    border-radius: 50%;
+    margin-left: 8px;
+    text-align: center;
+    line-height: 35px;
+      text-align: center;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .top span.clear:hover {
+    color: #777;
+  }
+  
+  .top span.clear:active {
+      background-color: rgba(255,255,255,0.3);
+    float: left;
+    width: 45px;
+    height: 45px;
+  /*   border: 1px solid #555; */
+  /* //  border-radius: 50%; */
+    margin-left: 8px;
+    text-align: center;
+    line-height: 35px;
+      text-align: center;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  
+  .top #display {
+      height: 45px;
+      width: 240px;
+      margin-left: 10px;
+      float: left;
+      margin-bottom: 10px;
+      background: rgba(19, 18, 18, 0.2);
+      border-radius: 6px;
+    line-height: 50px;
+    padding: 0 15px 0 10px;
+    font-size: 1.8em;
+    text-align: right;
+    overflow: hidden;
+    color: #eee;
+  }
+  
+  .keys span{
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-top: -200px;
+  /*   border: 1px solid #ddd; */
+    border-radius: 50%;
+    text-align: center;
+    margin: 6px;
+    line-height: 50px;
+      text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  .keys span:hover{
+    color: #777;
+  }
+  
+  sup {
+    font-size: 0.6em;
+    margin-left:2px;
+  }
+  
+  /* .unselectable {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+  } */
+  
+  /* 
+  ========================
+        BUTTON
+  ========================
+  */
+  .btn {
+      color: #eee;
+      transition: all 0.5s;
+      position: relative;
+    border-radius: 100%;
+    padding: 4px 0;
+  }
+  .btn::active {
+    background-color: rgba(255,255,255,0.3);
+  }
+  
+  .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(255,255,255,0.2);
+      transition: all 0.3s;
+    border-radius: 100%;
+  }
+  .btn:hover::before {
+      opacity: 0 ;
+      transform: scale(0.5,0.5);
+  }
+  .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.3s;
+      border: 1px solid rgba(255,255,255,0.5);
+      transform: scale(1.2,1.2);
+    border-radius: 100%;
+  }
+  .btn:hover::after {
+      opacity: 1;
+      transform: scale(1,1);
+  }
